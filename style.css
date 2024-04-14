@@ -1,0 +1,50 @@
+*:before,
+*:after,
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body{
+    background-color: white;
+}
+
+.container {
+  width: 100%;
+  margin: 25px auto;
+  columns: 4;
+  padding: 15px;
+  column-gap: 25px;
+}
+
+.container .box {
+  width: 100%;
+  margin-bottom: 15px;
+  break-inside: avoid;
+}
+
+.container .box img {
+  max-width: 100%;
+  border-radius: 15px;
+  transition: transform 0.4s ease;
+}
+
+@media (max-width: 1200px) {
+  .container {
+    width: calc(100% - 40px);
+    columns: 3;
+  }
+}
+
+@media (max-width: 768px) {
+  .container {
+    columns: 2;
+  }
+}
+
+@media (max-width: 480px) {
+  .container {
+    columns: 1;
+  }
+}
